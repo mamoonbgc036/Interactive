@@ -3,15 +3,15 @@
 ## Screenshots
 <div class="row">
   <div class="column">
-    <img src="https://github.com/mamoonbgc036/PerkyRabbit/blob/main/public/image/parky.png">
+    <img src="https://github.com/mamoonbgc036/Interactive/blob/main/public/login.png">
   </div>
   <div class="column">
-    <img src="https://github.com/mamoonbgc036/PerkyRabbit/blob/main/public/image/parkyR.png">
+    <img src="https://github.com/mamoonbgc036/Interactive/blob/main/public/product.png">
   </div>
 </div>
 <div class="row">
   <div class="column">
-    <img src="https://github.com/mamoonbgc036/PerkyRabbit/blob/main/public/image/dashboard.png">
+    <img src="https://github.com/mamoonbgc036/Interactive/blob/main/public/register.png">
   </div>
 </div>
 
