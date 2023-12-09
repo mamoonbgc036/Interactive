@@ -1,4 +1,4 @@
-<h1 align="center">Perky Rabbit Code Test</h1>
+<h1 align="center">Interactive Code Test</h1>
 
 ## Screenshots
 <div class="row">
