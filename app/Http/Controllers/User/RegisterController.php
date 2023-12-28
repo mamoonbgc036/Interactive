@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\StoreUserRequest;
@@ -12,14 +12,14 @@ class RegisterController extends Controller
 {
     public function index()
     {
-        return view('auth.register');
+        return view('user.register');
     }
 
     public function store(StoreUserRequest $request)
     {
         $user_details = $request->validated();
         if ($request->hasFile('image')) {
-            $file_path = Storage::put('/upload', $request->file('image'));
+            $file_path = Storage::put('upload/', $request->file('image'));
             $user_details['image'] = $file_path;
         }
         $user = User::create($user_details);
@@ -27,6 +27,6 @@ class RegisterController extends Controller
         $logedUser = Auth::login($user);
 
 
-        return redirect()->route('product.index');
+        return redirect()->route('dashboard');
     }
 }

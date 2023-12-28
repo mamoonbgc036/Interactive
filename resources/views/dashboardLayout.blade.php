@@ -6,7 +6,7 @@
     <nav class="sidebar">
         <div class="sidebar-header">
             <a href="#" class="sidebar-brand">
-                Interactive
+                Qtec Solution
             </a>
             <div class="sidebar-toggler not-active">
                 <span></span>
@@ -36,7 +36,7 @@
                             </path>
                             <polyline points="22,6 12,13 2,6"></polyline>
                         </svg>
-                        <span class="link-title">Product</span>
+                        <span class="link-title">Url</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down link-arrow">
                             <polyline points="6 9 12 15 18 9"></polyline>
                         </svg>
@@ -44,10 +44,10 @@
                     <div class="collapse" id="emails">
                         <ul class="nav sub-menu">
                             <li class="nav-item">
-                                <a href="{{ route('product.create') }}" class="nav-link">Create Product</a>
+                                <a href="{{ route('dashboard.shorten') }}" class="nav-link">Create Url</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('product.index') }}" class="nav-link">All Product</a>
+                                <a href="{{ route('dashboard') }}" class="nav-link">Shortend Urls</a>
                             </li>
 
                         </ul>
@@ -326,12 +326,12 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="wd-30 ht-30 rounded-circle" src="{{ auth()->user()->image }}" alt="profile">
+                            <img class="wd-30 ht-30 rounded-circle" src="{{ asset( 'storage' ) }}/{{ auth()->user()->image }}" alt="profile">
                         </a>
                         <div class="dropdown-menu p-0" aria-labelledby="profileDropdown">
                             <div class="d-flex flex-column align-items-center border-bottom px-5 py-3">
                                 <div class="mb-3">
-                                    <img class="wd-80 ht-80 rounded-circle" src="{{ auth()->user()->image }}" alt="">
+                                    <img class="wd-80 ht-80 rounded-circle" src="{{ asset( 'storage' ) }}/{{ auth()->user()->image }}" alt="">
                                 </div>
                                 <div class="text-center">
                                     <p class="tx-16 fw-bolder">{{ auth()->user()->name }}</p>
@@ -371,7 +371,7 @@
                                     </a>
                                 </li>
                                 <li class="dropdown-item py-2">
-                                    <form method="POST" action="{{ route('logout') }}" class="text-body ms-0">
+                                    <form method="POST" action="{{ route('user.logout') }}" class="text-body ms-0">
                                         @csrf
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out me-2 icon-md">
                                             <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
@@ -397,7 +397,7 @@
 
         <!-- partial:../../partials/_footer.html -->
         <footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between px-4 py-3 border-top small">
-            <p class="text-muted mb-1 mb-md-0">Copyright © 2022 <a href="https://www.nobleui.com" target="_blank">Interactive</a>.</p>
+            <p class="text-muted mb-1 mb-md-0">Copyright © 2022 <a href="https://www.nobleui.com" target="_blank">Qtec Solution Limited</a>.</p>
             <p class="text-muted">Handcrafted With <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart mb-1 text-primary ms-1 icon-sm">
                     <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
                     </path>

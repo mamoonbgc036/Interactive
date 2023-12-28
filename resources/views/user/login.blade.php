@@ -1,12 +1,12 @@
-@extends('auth.authLayout')
+@extends('user.authLayout')
 @section('content')
 <div class="col-md-8 ps-md-0">
     <div class="auth-form-wrapper px-4 py-5">
-        <a href="#" class="noble-ui-logo logo-light d-block mb-2">Interactive Care</a>
+        <a href="#" class="noble-ui-logo logo-light d-block mb-2">Qtec Solution Limited</a>
         <h5 class="text-warning fw-normal mb-4">
             Admin Login
         </h5>
-        <form class="forms-sample" method="POST" action="{{ route('admin.login') }}">
+        <form class="forms-sample" method="POST" action="{{ route('user.login') }}">
             @csrf
             @if(session('message'))
             <div class="alert alert-danger">
@@ -37,7 +37,7 @@
             <div>
                 <button type="submit" class="btn btn-primary me-2 mb-2 mb-md-0 text-white">Login</button>
             </div>
-            <a href="/register" class="d-block mt-3 text-warning">Not a user?
+            <a href="{{ route('user.register') }}" class="d-block mt-3 text-warning">Not a user?
                 Sign
                 up</a>
         </form>

@@ -1,12 +1,12 @@
-@extends('auth.authLayout')
+@extends('user.authLayout')
 @section('content')
 <div class="col-md-8 ps-md-0">
     <div class="auth-form-wrapper px-4 py-5">
-        <a href="#" class="noble-ui-logo logo-light d-block mb-2">Interactive</a>
+        <a href="#" class="noble-ui-logo logo-light d-block mb-2">Qtec Solution Limited</a>
         <h5 class="text-warning fw-normal mb-4">
             Create admin account.
         </h5>
-        <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data" class="forms-sample">
+        <form method="POST" action="{{ route('user.register') }}" enctype="multipart/form-data" class="forms-sample">
             @csrf
             <div class="mb-3">
                 <label for="exampleInputUsername1" class="form-label text-info">Name</label>
@@ -48,7 +48,7 @@
                 </button>
             </div>
         </form>
-        <a href="{{ route('login') }}" class="d-block mt-3 text-info">Already a user? Sign in</a>
+        <a href="{{ route('user.login') }}" class="d-block mt-3 text-info">Already a user? Sign in</a>
     </div>
 </div>
 @endsection
